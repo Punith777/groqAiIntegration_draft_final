@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 245 25% 98%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 175 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 175 90% 55%;
+    --primary-variant: 190 80% 50%;
+
+    --secondary: 200 90% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 245 20% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 262 90% 95%;
+    --accent-foreground: 262 83% 58%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 88%;
+    --input: 240 10% 88%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(175 85% 45%), hsl(190 80% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200 90% 50%), hsl(210 85% 55%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(175 15% 97%));
+    --gradient-accent: linear-gradient(135deg, hsl(175 60% 96%), hsl(190 50% 97%));
+    --shadow-elegant: 0 8px 30px -8px hsl(175 85% 45% / 0.25);
+    --shadow-glow: 0 0 50px hsl(175 90% 55% / 0.3);
+    --shadow-soft: 0 2px 15px -3px hsl(240 10% 10% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 240 6% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 175 85% 45%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 240 10% 98%;
+
+    --card: 240 10% 10%;
+    --card-foreground: 240 10% 98%;
+
+    --popover: 240 10% 10%;
+    --popover-foreground: 240 10% 98%;
+
+    --primary: 175 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 175 90% 55%;
+    --primary-variant: 190 80% 50%;
+
+    --secondary: 200 90% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 5% 18%;
+    --accent-foreground: 262 83% 68%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 240 10% 98%;
+
+    --border: 240 4% 20%;
+    --input: 240 4% 20%;
+    --ring: 262 83% 58%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(175 85% 45%), hsl(190 80% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200 90% 50%), hsl(210 85% 55%));
+    --gradient-card: linear-gradient(180deg, hsl(240 10% 10%), hsl(240 10% 8%));
+    --gradient-accent: linear-gradient(135deg, hsl(240 5% 18%), hsl(240 5% 15%));
+    --shadow-elegant: 0 8px 30px -8px hsl(175 85% 45% / 0.35);
+    --shadow-glow: 0 0 50px hsl(175 90% 55% / 0.4);
+    --shadow-soft: 0 2px 15px -3px hsl(0 0% 0% / 0.3);
+
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 175 85% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 175 85% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
