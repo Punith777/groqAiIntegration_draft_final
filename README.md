@@ -57,6 +57,7 @@ Then open your browser at:
 http://localhost:5173
 
 VIDEO-INSIGHT-HUB-92-MAIN/
+
 ├── public/
 ├── src/
 │   ├── components/        # UI components
